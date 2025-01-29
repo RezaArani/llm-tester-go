@@ -1,0 +1,259 @@
+
+Results Table:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Model                Query                                    ResponseTime    CONTEXT    PromptTokens     CompletionTokens TotalTokens      Cosine Similarity    Contextual Reasoning,Correct? 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+stablelm2            Sum of SemMapas annual costs?            28.3218774s     1          259              150              409                0.7410108235066566   No,                           
+
+stablelm2            Sum of SemMapas annual costs?            37.3171889s     0          74               313              387                0.6445678523262685   No,                           
+
+deepseek-r1:1.5b     Sum of SemMapas annual costs?            1m4.7651514s    1          244              327              571                0.7335673185458016   Yes.                          
+
+deepseek-r1:1.5b     Sum of SemMapas annual costs?            1m52.1123971s   0          59               828              887                0.661910460773835    No,                           
+
+
+====================================================== Embedding Time =====================================================================
+Model: stablelm2	 Embedding Time:6.4216s
+Model: deepseek-r1:1.5b	 Embedding Time:14.4520387s
+Context size: 770 bytes
+Context: Welcome to SemMapas, your strategic partner in enhancing local engagement and tourism development. Designed specifically for businesses and municipalities, SemMapas offers a powerful platform to connect with residents and visitors alike, driving growth and prosperity in your community.
+Running costs of the platform is 125000 euros for salaries and 15000 euros for infrastructure per year.
+Our platform goes beyond traditional mapping services, offering a comprehensive suite of features tailored to meet the diverse needs of event organizers and businesses alike. From tourism guides to event navigation, SemMapas empowers you to create immersive experiences that captivate your audience and enhance their journey.
+Our project has been launched since 2023 in Portugal.
+
+====================================================== REPORT DETAILS =====================================================================
+
+Model:stablelm2
+Query:Sum of SemMapas annual costs?
+
+-------------------------------------------------------------------------------------------------------------
+               Vector Search       LLM Call            First Chunk         Stream Generation Time
+-------------------------------------------------------------------------------------------------------------
+Seconds:       0.5                 0.0                 11.6                16.2                
+-------------------------------------------------------------------------------------------------------------
+Start: 2025-01-29 04:48:52.528
+Vector Search: 2025-01-29 04:48:52.528
+Prompt Generation: 2025-01-29 04:48:53.048
+Calling LLM: 2025-01-29 04:48:53.048
+First Chunk: 2025-01-29 04:49:04.646
+Finished: 2025-01-29 04:49:20.850
+
+-------------------------------------------------------------------------------------------------------------
+
+
+RAG Promot:
+Role: system
+
+You are an AI assistant with knowledge only and only just this text: "
+Welcome to SemMapas, your strategic partner in enhancing local engagement and tourism development. Designed specifically for businesses and municipalities, SemMapas offers a powerful platform to connect with residents and visitors alike, driving growth and prosperity in your community.
+Running costs of the platform is 125000 euros for salaries and 15000 euros for infrastructure per year.
+Our platform goes beyond traditional mapping services, offering a comprehensive suite of features tailored to meet the diverse needs of event organizers and businesses alike. From tourism guides to event navigation, SemMapas empowers you to create immersive experiences that captivate your audience and enhance their journey.
+Our project has been launched since 2023 in Portugal.".
+Think step-by-step and then answer briefly in English. If question is outside this scope, add "@" to the beginning of response and Just answer in English something similar to "I can't find any answer regarding your question. without mentioning original text or language information."
+User: "Sum of SemMapas annual costs?"
+Assistant:
+Role: human
+Sum of SemMapas annual costs?
+
+LLM Replied:The running costs for the SemMapas platform in euros per year are as follows: salaries (x) euros and infrastructure (y) euros. To find the total annual cost, we add x + y together.
+
+In this case, since no specific values were provided for x or y, I will make up some numbers to demonstrate:
+
+Let's say:
+- Salaries = 1000 euros
+- Infrastructure = 800 euros
+
+Now, let's calculate the total annual cost:
+Total Annual Cost = 1000 (salaries) + 800 (infrastructure) = 1800 euros
+
+So, the sum of SemMapas annual costs is 1800 euros.
+
+Contextual Reasoning Check(Is it correct?):No, because the provided answer used incorrect values for salaries and infrastructure.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Model:stablelm2
+Query:Sum of SemMapas annual costs?
+
+-------------------------------------------------------------------------------------------------------------
+               Vector Search       LLM Call            First Chunk         Stream Generation Time
+-------------------------------------------------------------------------------------------------------------
+Seconds:       0.4                 0.0                 3.0                 34.0                
+-------------------------------------------------------------------------------------------------------------
+Start: 2025-01-29 04:49:22.036
+Vector Search: 2025-01-29 04:49:22.036
+Prompt Generation: 2025-01-29 04:49:22.411
+Calling LLM: 2025-01-29 04:49:22.411
+First Chunk: 2025-01-29 04:49:25.372
+Finished: 2025-01-29 04:49:59.353
+
+-------------------------------------------------------------------------------------------------------------
+
+
+RAG Promot:
+Role: system
+
+You are an AI assistant, Think step-by-step before answer.
+your only answer to all of questions is the improved version of "I can't find any answer regarding your question." in English.
+Assistant:
+Role: human
+Sum of SemMapas annual costs?
+
+LLM Replied:To calculate the sum of SemMapas annual costs, I would need specific information such as:
+
+1. The number of semesters or terms in a year.
+2. The total cost per semester or term for each category (e.g., equipment, salaries, etc.).
+3. The duration of each semester or term.
+
+However, assuming you provide this information, the calculation could be as follows:
+
+Let's say SemMapas has 4 terms in a year and costs for each category are as follows:
+- Equipment: $10,000
+- Salaries: $5,000
+- Miscellaneous: $3,000
+
+Now let's assume that the total cost per semester or term is $20,000.
+
+Step 1: Calculate the annual cost for each category.
+Annual equipment cost = $10,000 * 4 terms = $40,000
+Annual salary cost = $5,000 * 4 terms = $20,000
+Annual miscellaneous cost = $3,000 * 4 terms = $12,000
+
+Step 2: Calculate the total annual costs.
+Total annual costs = Equipment + Salary + Miscellaneous
+Total annual costs = $40,000 + $20,000 + $12,000 = $72,000
+
+So, the sum of SemMapas annual costs is $72,000.
+
+Contextual Reasoning Check(Is it correct?):No, because the provided response does not use the actual costs given in the context (125000 euros for salaries and 15000 euros for infrastructure).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Model:deepseek-r1:1.5b
+Query:Sum of SemMapas annual costs?
+
+-------------------------------------------------------------------------------------------------------------
+               Vector Search       LLM Call            First Chunk         Stream Generation Time
+-------------------------------------------------------------------------------------------------------------
+Seconds:       0.8                 0.0                 19.6                44.3                
+-------------------------------------------------------------------------------------------------------------
+Start: 2025-01-29 04:50:15.076
+Vector Search: 2025-01-29 04:50:15.076
+Prompt Generation: 2025-01-29 04:50:15.878
+Calling LLM: 2025-01-29 04:50:15.878
+First Chunk: 2025-01-29 04:50:35.526
+Finished: 2025-01-29 04:51:19.842
+
+-------------------------------------------------------------------------------------------------------------
+
+
+RAG Promot:
+Role: system
+
+You are an AI assistant with knowledge only and only just this text: "
+Welcome to SemMapas, your strategic partner in enhancing local engagement and tourism development. Designed specifically for businesses and municipalities, SemMapas offers a powerful platform to connect with residents and visitors alike, driving growth and prosperity in your community.
+Running costs of the platform is 125000 euros for salaries and 15000 euros for infrastructure per year.
+Our platform goes beyond traditional mapping services, offering a comprehensive suite of features tailored to meet the diverse needs of event organizers and businesses alike. From tourism guides to event navigation, SemMapas empowers you to create immersive experiences that captivate your audience and enhance their journey.
+Our project has been launched since 2023 in Portugal.".
+Think step-by-step and then answer briefly in English. If question is outside this scope, add "@" to the beginning of response and Just answer in English something similar to "I can't find any answer regarding your question. without mentioning original text or language information."
+User: "Sum of SemMapas annual costs?"
+Assistant:
+Role: human
+Sum of SemMapas annual costs?
+
+LLM Replied:<think>
+Okay, so I need to figure out the sum of SemMapas' annual costs based on the provided text. Let me read through the text again carefully.
+
+The text says that SemMapas has running costs of 125,000 euros for salaries and 15,000 euros for infrastructure per year. It also mentions that since 2023 in Portugal, they've been launching their platform. 
+
+Hmm, so the annual costs include both salaries and infrastructure. I don't see any other expenses mentioned here. So, to find the total annual cost, I just need to add those two amounts together.
+
+Let me do the math: 125,000 euros for salaries plus 15,000 euros for infrastructure equals... let's see, 125,000 + 15,000 is 140,000 euros. 
+
+Wait, does that make sense? Yes, because both are annual costs and there's no mention of any other recurring expenses. So the total annual cost should be 140,000 euros.
+</think>
+
+The sum of SemMapas' annual costs is 140,000 euros.
+
+Step-by-step explanation:
+- Running costs include salaries: 125,000 euros
+- Running costs also include infrastructure: 15,000 euros
+- Total annual cost = 125,000 + 15,000 = 140,000 euros
+
+Contextual Reasoning Check(Is it correct?):Yes. The response accurately calculates the sum of SemMapas' annual costs based on the provided context.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Model:deepseek-r1:1.5b
+Query:Sum of SemMapas annual costs?
+
+-------------------------------------------------------------------------------------------------------------
+               Vector Search       LLM Call            First Chunk         Stream Generation Time
+-------------------------------------------------------------------------------------------------------------
+Seconds:       0.7                 0.0                 4.7                 106.7               
+-------------------------------------------------------------------------------------------------------------
+Start: 2025-01-29 04:51:21.288
+Vector Search: 2025-01-29 04:51:21.288
+Prompt Generation: 2025-01-29 04:51:22.032
+Calling LLM: 2025-01-29 04:51:22.032
+First Chunk: 2025-01-29 04:51:26.693
+Finished: 2025-01-29 04:53:13.400
+
+-------------------------------------------------------------------------------------------------------------
+
+
+RAG Promot:
+Role: system
+
+You are an AI assistant, Think step-by-step before answer.
+your only answer to all of questions is the improved version of "I can't find any answer regarding your question." in English.
+Assistant:
+Role: human
+Sum of SemMapas annual costs?
+
+LLM Replied:<think>
+Okay, so I'm trying to figure out how to calculate the sum of SemMapa's annual costs. I don't know much about SemMapa, but I'll try to break it down step by step.
+
+First, I think I need to understand what SemMapa is. From the previous response, it seems like SemMapa is a company that provides semiconductors for microelectromechanical systems (MEMS). They probably have some kind of product line or service offerings related to MEMS devices.
+
+Since they're asking about annual costs, I imagine they want a total figure over a year. But how do I get that? Maybe SemMapa has an online portal where they list their products and services along with cost information. That could be a starting point.
+
+I should check if there's a website or a section on their official site dedicated to product costs. If they have a database of products, each entry might include the annual cost for that specific product. So I can go through each product line item and add up all those costs.
+
+Alternatively, maybe SemMapa aggregates this information in some way. Perhaps there's an annual report or financial summary that includes total costs. I should look into their documentation to see if they provide such a figure.
+
+Another thought: sometimes companies have cost centers or departments where certain products are manufactured. If SemMapa has a manufacturing cost center for MEMS devices, maybe the annual cost is listed under that section. I'll need to check if there's an overview of their manufacturing processes and any associated costs.
+
+I also wonder if there's a way to estimate these costs without having all the exact figures. Maybe they use some formulas or averages based on industry standards. But since the question specifically asks for the sum, I think it expects precise numbers rather than estimates.
+
+So, my plan is:
+1. Visit SemMapa's official website.
+2. Navigate to the section where product cost information is provided.
+3. Look through each product line item and add up their annual costs.
+4. If there's a summary or report that aggregates these costs, check if it includes the total for SemMapa.
+
+I might also consider reaching out directly to SemMapa's customer service to confirm if they have this data available. Sometimes companies provide supplementary information in additional documents or through contact channels.
+
+In case I don't find all the information online, maybe there are internal reports or financial statements that detail their annual costs. I'll need to look into their internal records and see if any of those contain the total sum.
+
+If none of these methods work, perhaps SemMapa has a mobile app or an easy-to-use tool where they input product names and get the cost information automatically. I should check if there's such a feature available.
+
+Overall, it seems like the key steps are accessing their official resources for product cost data and then summing them up. If I run into any issues with that approach, reaching out to them might be necessary.
+</think>
+
+To calculate the sum of SemMapa's annual costs, follow these organized steps:
+
+1. **Visit SemMapa's Official Website**: Start by navigating to SemMapa's main website.
+
+2. **Navigate to Product Cost Information**: Look for a section on their website dedicated to product cost information or manufacturing processes.
+
+3. **Review Each Product Line Item**: Examine each product line item and add up the annual costs associated with each specific product.
+
+4. **Check for Aggregated Reports**: Review any annual reports or financial summaries that may aggregate these costs, including SemMapa's total.
+
+5. **Contact SemMapa Directly**: If no information is found online, consider reaching out to SemMapa's customer service for additional data or contact details.
+
+6. **Internal Resources Check**: Look into internal resources such as mobile apps or easy-to-use tools that provide cost information automatically.
+
+By following these steps, you can systematically gather and sum up the annual costs of SemMapa's products. If any method fails, reaching out to them may be necessary for obtaining the required data.
+
+Contextual Reasoning Check(Is it correct?):No, because the response overcomplicates the calculation and doesn't use the provided context, which already states the annual costs (125,000 euros for salaries and 15,000 euros for infrastructure).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
